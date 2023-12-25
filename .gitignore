@@ -27,3 +27,6 @@ logs/scdbserver.log
 *.pyc
 
 .venv
+
+# .idea
+.idea/
