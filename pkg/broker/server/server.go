@@ -45,7 +45,7 @@ func NewIntraServer(app *application.App) (*http.Server, error) {
 		AllowCredentials: true,
 		MaxAge:           50 * time.Second,
 	}))
-
+	// 内部接口，提供给本方的client调用
 	intraSvc := intra.NewIntraSvc(app)
 	router.POST(constant.DoQueryPath, intraSvc.DoQueryHandler)
 	router.POST(constant.SubmitQueryPath, intraSvc.SubmitQueryHandler)
@@ -85,14 +85,14 @@ func NewInterServer(
 		AllowCredentials: true,
 		MaxAge:           50 * time.Second,
 	}))
-
+	// 外部接口，提供给对方的broker调用
 	interSvc := inter.NewInterSvc(app)
-	router.POST(constant.InviteToProjectPath, interSvc.InviteToProjectHandler)
-	router.POST(constant.ReplyInvitationPath, interSvc.ReplyInvitationHandler)
-	router.POST(constant.SyncInfoPath, interSvc.SyncInfoHandler)
-	router.POST(constant.AskInfoPath, interSvc.AskInfoHandler)
-	router.POST(constant.DistributeQueryPath, interSvc.DistributedQueryHandler)
-	router.POST(constant.ExchangeJobInfoPath, interSvc.ExchangeJobInfoHandler)
+	router.POST(constant.InviteToProjectPath, interSvc.InviteToProjectHandler)  // 邀请加入项目的服务接口
+	router.POST(constant.ReplyInvitationPath, interSvc.ReplyInvitationHandler)  // 接收邀请结果的服务接口
+	router.POST(constant.SyncInfoPath, interSvc.SyncInfoHandler)                // 同步信息服务接口，接收对方的同步信息请求：AddProjectMember、Create/Drop Table、Grant/Revoke CCL
+	router.POST(constant.AskInfoPath, interSvc.AskInfoHandler)                  // 查询信息：提供项目、表、CCL的查询服务
+	router.POST(constant.DistributeQueryPath, interSvc.DistributedQueryHandler) // 联合SQL查询接口
+	router.POST(constant.ExchangeJobInfoPath, interSvc.ExchangeJobInfoHandler)  // 联合SQL查询时会调用对方的这个接口
 
 	return &http.Server{
 		Addr:           fmt.Sprintf("%s:%v", app.Conf.InterServer.Host, app.Conf.InterServer.Port),

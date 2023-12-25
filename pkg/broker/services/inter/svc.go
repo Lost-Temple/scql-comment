@@ -373,7 +373,7 @@ func (svc *InterSvc) SyncInfoHandler(c *gin.Context) {
 		response.Status.Message = fmt.Sprintf("SyncInfoHandler: %v", err)
 		return
 	}
-	err = svc.app.Auth.CheckSign(&req, pubKey)
+	err = svc.app.Auth.CheckSign(&req, pubKey) // 鉴权
 	if err != nil {
 		response.Status.Code = int32(pb.Code_UNAUTHENTICATED)
 		c.String(http.StatusBadRequest, "SyncInfoHandler: unable to check signature: %v", err)
@@ -407,7 +407,7 @@ func (svc *InterSvc) AskInfoHandler(c *gin.Context) {
 		response.Status.Message = fmt.Sprintf("AskInfoHandler: %v", err)
 		return
 	}
-	err = svc.app.Auth.CheckSign(&req, pubKey)
+	err = svc.app.Auth.CheckSign(&req, pubKey) // 鉴权
 	if err != nil {
 		response.Status.Code = int32(pb.Code_UNAUTHENTICATED)
 		c.String(http.StatusBadRequest, "AskInfoHandler: unable to check signature: %v", err)

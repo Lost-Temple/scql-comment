@@ -75,7 +75,7 @@ func (auth *Auth) CheckSign(msg proto.Message, pubKey string) (err error) {
 		}
 	}()
 
-	pubDER, err := base64.StdEncoding.DecodeString(pubKey)
+	pubDER, err := base64.StdEncoding.DecodeString(pubKey) // 公钥是用Base64编码的，先解码
 	if err != nil {
 		return fmt.Errorf("failed to parse public key in base64 encoding: %v", err)
 	}
@@ -99,7 +99,7 @@ func (auth *Auth) CheckSign(msg proto.Message, pubKey string) (err error) {
 	}
 
 	switch pub := pub.(type) {
-	case ed25519.PublicKey:
+	case ed25519.PublicKey: // 使用公钥去验证签名内容
 		if !ed25519.Verify(pub, msgArray, sign) {
 			return fmt.Errorf("failed to verify signature with public key")
 		}

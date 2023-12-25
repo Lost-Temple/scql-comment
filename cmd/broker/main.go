@@ -47,7 +47,7 @@ const (
 
 var version = "scql version"
 
-// custom monitor formatter, e.g.: "2020-07-14 16:59:47.7144 INFO main.go:107 |msg"
+// CustomMonitorFormatter custom monitor formatter, e.g.: "2020-07-14 16:59:47.7144 INFO main.go:107 |msg"
 type CustomMonitorFormatter struct {
 	log.TextFormatter
 }
@@ -94,7 +94,7 @@ func main() {
 	log.SetOutput(mOut)
 
 	log.Infof("Starting to read config file: %s", *confFile)
-	cfg, err := config.NewConfig(*confFile)
+	cfg, err := config.NewConfig(*confFile) // 读取配置文件
 	if err != nil {
 		log.Fatalf("Failed to create config from %s: %v", *confFile, err)
 	}

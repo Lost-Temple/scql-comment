@@ -141,7 +141,7 @@ func (svc *grpcInterSvc) ReplyInvitation(c context.Context, req *pb.ReplyInvitat
 				targetParties = append(targetParties, p)
 			}
 		}
-		go func() {
+		go func() { // 同步信息给对方broker
 			err := common.PostSyncInfo(svc.app, req.GetProjectId(), pb.ChangeEntry_AddProjectMember, req.GetClientId().GetCode(), targetParties)
 			if err != nil {
 				logrus.Warnf("ReplyInvitation: sync info to %v err %s", targetParties, err)

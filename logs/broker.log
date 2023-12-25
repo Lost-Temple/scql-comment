@@ -1,0 +1,2 @@
+2023-12-25 13:59:46.12251 INFO main.go:96 Starting to read config file: cmd/broker/config.yml
+2023-12-25 13:59:53.12251 FATAL main.go:99 Failed to create config from cmd/broker/config.yml: failed to read file cmd/broker/config.yml: open cmd/broker/config.yml: no such file or directory

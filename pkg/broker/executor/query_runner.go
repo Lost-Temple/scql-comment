@@ -141,7 +141,7 @@ func (r *QueryRunner) ExchangeJobInfo(targetParty string) (*pb.ExchangeJobInfoRe
 	response := &pb.ExchangeJobInfoResponse{}
 	// retry to make sure that peer broker has created session
 	for i := 0; i < r.session.Conf.ExchangeJobInfoRetryTimes; i++ {
-		err = executionInfo.InterStub.ExchangeJobInfo(url, req, response)
+		err = executionInfo.InterStub.ExchangeJobInfo(url, req, response) // 在这里调用，对方的broker ExchangeJobInfoHandler接口
 		if err != nil {
 			return nil, fmt.Errorf("ExchangeJobInfoStub: %v", err)
 		}

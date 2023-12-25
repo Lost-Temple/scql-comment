@@ -138,7 +138,7 @@ func (svc *grpcInterSvc) DistributeQuery(ctx context.Context, req *pb.Distribute
 			continue
 		}
 		go func(p string) {
-			prepareAgain, err := checkInfoFromOtherParty(session, r, p)
+			prepareAgain, err := checkInfoFromOtherParty(session, r, p) // 这里会去调用对方broker的ExchangeJobInfoHandler接口
 			retCh <- retInfo{err: err, prepareAgain: prepareAgain}
 		}(p)
 	}
@@ -193,7 +193,7 @@ func (svc *grpcInterSvc) DistributeQuery(ctx context.Context, req *pb.Distribute
 }
 
 func checkInfoFromOtherParty(session *application.Session, r *executor.QueryRunner, targetCode string) (prepareAgain bool, err error) {
-	response, err := r.ExchangeJobInfo(targetCode)
+	response, err := r.ExchangeJobInfo(targetCode) // 调用对方broker的ExchangeJobInfoHandler
 	if err != nil {
 		return
 	}
