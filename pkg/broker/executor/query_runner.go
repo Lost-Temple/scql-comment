@@ -55,7 +55,7 @@ func NewQueryRunner(session *application.Session) *QueryRunner {
 	}
 }
 
-func (r *QueryRunner) Clear() {
+func (r *QueryRunner) Clear() { // 重置内部状态
 	r.info = nil
 	r.is = nil
 	r.ccls = nil
@@ -63,15 +63,15 @@ func (r *QueryRunner) Clear() {
 
 func (r *QueryRunner) GetEnginesInfo() *translator.EnginesInfo {
 	return r.info
-}
+} // 获取有关查询引擎的信息
 
 func (r *QueryRunner) SetPrepareAgain() {
 	r.prepareAgain = true
 }
 
-func (r *QueryRunner) CreateChecksum() (map[string]application.Checksum, error) {
+func (r *QueryRunner) CreateChecksum() (map[string]application.Checksum, error) { // 为表和列控制生成校验和
 	s := r.session
-	checksumMap := make(map[string]application.Checksum)
+	checksumMap := make(map[string]application.Checksum) // 最后的校验和是一个map,键为参与方，值为校验和
 	for _, p := range s.ExecuteInfo.DataParties {
 		tableSchemaCrypt := sha256.New()
 		cclCrypt := sha256.New()
@@ -80,7 +80,7 @@ func (r *QueryRunner) CreateChecksum() (map[string]application.Checksum, error) 
 			return tables[i].String() < tables[j].String()
 		})
 		for _, t := range tables {
-			tableSchemaCrypt.Write([]byte(t.String()))
+			tableSchemaCrypt.Write([]byte(t.String())) // t.String() 返回的是 数据库名.表名 这样格式的字符串
 			tableSchema, err := r.is.TableByName(model.NewCIStr(t.GetDbName()), model.NewCIStr(t.GetTableName()))
 			if err != nil {
 				return nil, err

@@ -41,8 +41,8 @@ func (svc *grpcInterSvc) DistributeQuery(ctx context.Context, req *pb.Distribute
 
 	app := svc.app
 	// 2. create session
-	session, exist := app.GetSession(req.JobId)
-	if exist {
+	session, exist := app.GetSession(req.JobId) // 查找对应的session是否存在
+	if exist {                                  // JobID 不能重覆
 		errStr := fmt.Sprintf("DistributeQuery: duplicated job id: %s", req.JobId)
 		logrus.Warning(errStr)
 		return nil, fmt.Errorf(errStr)
@@ -54,7 +54,7 @@ func (svc *grpcInterSvc) DistributeQuery(ctx context.Context, req *pb.Distribute
 		Issuer:       req.GetClientId(),
 		EngineClient: app.EngineClient,
 	}
-	session, err = application.NewSession(ctx, info, app, req.GetIsAsync())
+	session, err = application.NewSession(ctx, info, app, req.GetIsAsync()) // 创建一个新的session
 	if err != nil {
 		return
 	}
