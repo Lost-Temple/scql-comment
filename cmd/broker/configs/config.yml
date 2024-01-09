@@ -1,0 +1,30 @@
+intra_server:
+  protocol: http
+  host: 0.0.0.0
+  port: 8080
+inter_server:
+  port: 8083
+  protocol: https
+  cert_file: "/Users/mao/work/go/src/opensource/secretflow/scql/cmd/broker/configs/cert.pem"
+  key_file: "/Users/mao/work/go/src/opensource/secretflow/scql/cmd/broker/configs/key.pem"
+log_level: debug
+party_code: alice
+party_info_file: "/Users/mao/work/go/src/opensource/secretflow/scql/cmd/broker/configs/party_info.json"
+private_pem_path: "/Users/mao/work/go/src/opensource/secretflow/scql/cmd/broker/configs/private_key.pem"
+intra_host: 192.168.103.2:8080
+engine:
+  timeout: 120s
+  protocol: https
+  content_type: application/json
+  uris:
+    - for_peer: 192.168.10.91:8003
+      for_self: 192.168.10.91:8003
+storage:
+  type: mysql
+  conn_str: "root:ABOHTygDvbDqw@tcp(192.168.10.91:13306)/brokeralice?charset=utf8mb4&parseTime=True&loc=Local&interpolateParams=true"
+  max_idle_conns: 10
+  max_open_conns: 100
+  conn_max_idle_time: 2m
+  conn_max_lifetime: 5m
+# deprecated configs, temporarily reserved for compatibility with older versions
+engines: ["192.168.10.91:8003"]

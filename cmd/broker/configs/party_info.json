@@ -1,0 +1,14 @@
+{
+  "participants": [
+    {
+      "party_code": "alice",
+      "endpoint": "https://192.168.103.2:8083",
+      "pubkey": "MCowBQYDK2VwAyEAfHMwci/2RYToii+Vt/NIyhl91jrBWxEQMd79SG31hqU="
+    },
+    {
+      "party_code": "bob",
+      "endpoint": "https://192.168.10.91:8083",
+      "pubkey": "MCowBQYDK2VwAyEA5oM4SKe8/kzpT1/muJAJMVzEyMixFAhwIPlK0V/iI18="
+    }
+  ]
+}

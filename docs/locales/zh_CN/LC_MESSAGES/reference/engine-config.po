@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SCQL \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-12-04 16:14+0800\n"
+"POT-Creation-Date: 2024-01-05 15:22+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: zh_CN\n"
@@ -18,1307 +18,482 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.12.1\n"
 
-#: ../../reference/engine-config.rst:3
-msgid "SCQL System Config"
-msgstr "SCQL 系统配置"
-
 #: ../../reference/engine-config.rst:5
-msgid ""
-"This configuration manual is designed to help users understand the "
-"various configuration options available for the SCQL system. It can be "
-"divided into three parts: SCDB configuration options (for Centralized "
-"mode), SCQLBroker configuration options (for P2P mode) and SCQLEngine "
-"configuration options (for both modes)."
-msgstr ""
-"本配置手册旨在帮助用户了解 SCQL 系统的各种配置项。 它可以分为三部分：SCDB 配置项、 SCQLBroker 配置项和 Engine "
-"配置项。"
-
-#: ../../reference/engine-config.rst:10
-msgid "SCDB configuration options"
-msgstr "SCDB 配置说明"
-
-#: ../../reference/engine-config.rst:12
-msgid "In SCDB, configuration parameters are provided as yaml file."
-msgstr "在 SCDB 中配置参数以 yaml 文件形式提供。"
-
-#: ../../reference/engine-config.rst:15
-msgid "Example for SCDB"
-msgstr "SCDB 配置示例"
-
-#: ../../reference/engine-config.rst:56
-msgid "Config in SCDB"
-msgstr "SCDB 配置项"
-
-#: ../../reference/engine-config.rst:59 ../../reference/engine-config.rst:291
-#: ../../reference/engine-config.rst:416
-msgid "Name"
-msgstr "名称"
-
-#: ../../reference/engine-config.rst:59 ../../reference/engine-config.rst:291
-#: ../../reference/engine-config.rst:416
-msgid "Default"
-msgstr "默认值"
-
-#: ../../reference/engine-config.rst:59 ../../reference/engine-config.rst:291
-#: ../../reference/engine-config.rst:416
-msgid "Description"
-msgstr "描述"
-
-#: ../../reference/engine-config.rst:61
-msgid "scdb_host"
-msgstr "scdb_host"
-
-#: ../../reference/engine-config.rst:61 ../../reference/engine-config.rst:63
-#: ../../reference/engine-config.rst:93 ../../reference/engine-config.rst:95
-#: ../../reference/engine-config.rst:97 ../../reference/engine-config.rst:99
-#: ../../reference/engine-config.rst:109 ../../reference/engine-config.rst:113
-#: ../../reference/engine-config.rst:115 ../../reference/engine-config.rst:117
-#: ../../reference/engine-config.rst:119 ../../reference/engine-config.rst:295
-#: ../../reference/engine-config.rst:299 ../../reference/engine-config.rst:301
-#: ../../reference/engine-config.rst:303 ../../reference/engine-config.rst:305
-#: ../../reference/engine-config.rst:309 ../../reference/engine-config.rst:311
-#: ../../reference/engine-config.rst:317 ../../reference/engine-config.rst:319
-#: ../../reference/engine-config.rst:321 ../../reference/engine-config.rst:323
-#: ../../reference/engine-config.rst:325 ../../reference/engine-config.rst:329
-#: ../../reference/engine-config.rst:331 ../../reference/engine-config.rst:336
-#: ../../reference/engine-config.rst:338 ../../reference/engine-config.rst:442
-#: ../../reference/engine-config.rst:458 ../../reference/engine-config.rst:470
-#: ../../reference/engine-config.rst:472 ../../reference/engine-config.rst:476
-#: ../../reference/engine-config.rst:480 ../../reference/engine-config.rst:486
-#: ../../reference/engine-config.rst:488 ../../reference/engine-config.rst:494
-#: ../../reference/engine-config.rst:498
-msgid "none"
-msgstr "无"
-
-#: ../../reference/engine-config.rst:61
-msgid "The callback URL for the SCQLEngine to notify SCDB"
-msgstr "SCQLEngine 通知 SCDB 的回调 URL"
-
-#: ../../reference/engine-config.rst:63
-msgid "port"
-msgstr "port"
-
-#: ../../reference/engine-config.rst:63
-msgid "The listening port of the SCDB server"
-msgstr "SCDB服务器监听端口"
-
-#: ../../reference/engine-config.rst:65
-msgid "protocol"
-msgstr "protocol"
-
-#: ../../reference/engine-config.rst:65 ../../reference/engine-config.rst:111
-msgid "https"
-msgstr "https"
-
-#: ../../reference/engine-config.rst:65
-msgid "The transfer protocol of SCDB server, supports HTTP/HTTPS"
-msgstr "SCDB服务器传输协议支持HTTP/HTTPS"
-
-#: ../../reference/engine-config.rst:67
-msgid "query_result_callback_timeout"
-msgstr "query_result_callback_timeout"
-
-#: ../../reference/engine-config.rst:67
-msgid "200ms"
-msgstr "200ms"
-
-#: ../../reference/engine-config.rst:67
-msgid "Timeout for SCDB to notify the query result"
-msgstr "SCDB 返回查询结果的超时时间"
-
-#: ../../reference/engine-config.rst:69 ../../reference/engine-config.rst:348
-msgid "session_expire_time"
-msgstr "session_expire_time"
-
-#: ../../reference/engine-config.rst:69
-msgid "48h"
-msgstr "48h"
-
-#: ../../reference/engine-config.rst:69
-msgid "The expiration duration of a session"
-msgstr "会话超时时间"
-
-#: ../../reference/engine-config.rst:71 ../../reference/engine-config.rst:350
-msgid "session_expire_check_time"
-msgstr "session_expire_check_time"
-
-#: ../../reference/engine-config.rst:71
-msgid "1h"
-msgstr "1h"
-
-#: ../../reference/engine-config.rst:71
-msgid "The cleanup interval of expired session"
-msgstr "超时会话的清理间隔"
-
-#: ../../reference/engine-config.rst:73
-msgid "password_check"
-msgstr "password_check"
-
-#: ../../reference/engine-config.rst:73 ../../reference/engine-config.rst:77
-#: ../../reference/engine-config.rst:123 ../../reference/engine-config.rst:418
-#: ../../reference/engine-config.rst:422 ../../reference/engine-config.rst:438
-#: ../../reference/engine-config.rst:454 ../../reference/engine-config.rst:468
-#: ../../reference/engine-config.rst:492 ../../reference/engine-config.rst:496
-msgid "true"
-msgstr "true"
-
-#: ../../reference/engine-config.rst:73
-msgid "Whether to validate password strength when create a user"
-msgstr "创建用户时是否验证密码强度"
-
-#: ../../reference/engine-config.rst:75 ../../reference/engine-config.rst:315
-msgid "log_level"
-msgstr "log_level"
-
-#: ../../reference/engine-config.rst:75 ../../reference/engine-config.rst:315
-msgid "info"
-msgstr "info"
-
-#: ../../reference/engine-config.rst:75 ../../reference/engine-config.rst:315
-msgid "The type and severity of a logged event"
-msgstr "日志等级"
-
-#: ../../reference/engine-config.rst:77 ../../reference/engine-config.rst:422
-msgid "enable_audit_logger"
-msgstr "enable_audit_logger"
-
-#: ../../reference/engine-config.rst:77
-msgid "Whether to enable audit logger"
-msgstr "是否记录审计日志"
-
-#: ../../reference/engine-config.rst:79
-msgid "audit.audit_log_file"
-msgstr "audit.audit_log_file"
-
-#: ../../reference/engine-config.rst:79 ../../reference/engine-config.rst:424
-msgid "audit/audit.log"
-msgstr "audit/audit.log"
-
-#: ../../reference/engine-config.rst:79 ../../reference/engine-config.rst:424
-msgid "The file to save basic information about a query"
-msgstr "存储基础审计信息的日志文件"
-
-#: ../../reference/engine-config.rst:81
-msgid "audit.audit_detail_file"
-msgstr "audit.audit_detail_file"
-
-#: ../../reference/engine-config.rst:81 ../../reference/engine-config.rst:426
-msgid "audit/detail.log"
-msgstr "audit/detail.log"
-
-#: ../../reference/engine-config.rst:81 ../../reference/engine-config.rst:426
-msgid "The file to save more detailed information about a query"
-msgstr "存储补充审计信息的日志文件"
-
-#: ../../reference/engine-config.rst:83
-msgid "audit.audit_max_size"
-msgstr "audit.audit_max_size"
-
-#: ../../reference/engine-config.rst:83
-msgid "500"
-msgstr "5000"
-
-#: ../../reference/engine-config.rst:83
-msgid "The maximum size of the audit log file before it gets rotated, unit: MB"
-msgstr "单个审计日志文件的最大容量，单位为MB"
-
-#: ../../reference/engine-config.rst:85
-msgid "audit.audit_max_backups"
-msgstr "audit.audit_max_backups"
-
-#: ../../reference/engine-config.rst:85
-msgid "0"
-msgstr "0"
-
-#: ../../reference/engine-config.rst:85
-msgid ""
-"The maximum number of old audit log files to retain, default 0 to retain "
-"all old log files"
-msgstr "系统中保留的审计日志文件的最大数量，0 表示保留所有的日志文件"
-
-#: ../../reference/engine-config.rst:87
-msgid "audit.audit_max_age_days"
-msgstr "audit.audit_max_age_days"
-
-#: ../../reference/engine-config.rst:87 ../../reference/engine-config.rst:428
-msgid "180"
-msgstr "180"
-
-#: ../../reference/engine-config.rst:87
-msgid "The maximum number of days to retain old log files"
-msgstr "单个审计日志文件所能保存的最长时间，单位：天"
-
-#: ../../reference/engine-config.rst:89
-msgid "audit.audit_max_compress"
-msgstr "audit.audit_max_compress"
-
-#: ../../reference/engine-config.rst:89 ../../reference/engine-config.rst:91
-#: ../../reference/engine-config.rst:334 ../../reference/engine-config.rst:440
-#: ../../reference/engine-config.rst:456 ../../reference/engine-config.rst:462
-#: ../../reference/engine-config.rst:474 ../../reference/engine-config.rst:478
-#: ../../reference/engine-config.rst:490
-msgid "false"
-msgstr "false"
-
-#: ../../reference/engine-config.rst:89
-msgid "Whether the rotated log files should be compressed"
-msgstr "是否对审计日志进行压缩"
-
-#: ../../reference/engine-config.rst:91 ../../reference/engine-config.rst:334
-msgid "security_compromise.reveal_group_mark"
-msgstr "security_compromise.reveal_group_mark"
-
-#: ../../reference/engine-config.rst:91 ../../reference/engine-config.rst:334
-msgid "Whether to reveal group_mark directly for group by"
-msgstr "是否在计算 group by 的时候泄露分组标记信息"
-
-#: ../../reference/engine-config.rst:93
-msgid "tls.cert_file"
-msgstr "tls.cert_file"
-
-#: ../../reference/engine-config.rst:93
-msgid "Certificate file path to enable TSL, supports crt/pem type"
-msgstr "启用支持 crt/pem 类型的TSL证书文件路径"
-
-#: ../../reference/engine-config.rst:95
-msgid "tls.key_file"
-msgstr "tls.key_file"
-
-#: ../../reference/engine-config.rst:95
-msgid "Private key file path to enable TSL, supports key/pem type"
-msgstr "启用支持 key/pem 类型的 TLS 私钥文件路径"
-
-#: ../../reference/engine-config.rst:97 ../../reference/engine-config.rst:336
-msgid "storage.type"
-msgstr "storage.type"
-
-#: ../../reference/engine-config.rst:97
-msgid ""
-"Database kind in SCDB, supports MYSQL/SQLite3, MYSQL is recommended, "
-"SQLite3 may have problems with concurrency"
-msgstr "SCDB 使用的数据库类型， 支持 MYSQL/SQLite3，推荐使用 MYSQL，SQLite3在并发下可能出问题"
-
-#: ../../reference/engine-config.rst:99 ../../reference/engine-config.rst:338
-msgid "storage.conn_str"
-msgstr "storage.conn_str"
-
-#: ../../reference/engine-config.rst:99 ../../reference/engine-config.rst:338
-msgid "Used to connect to a database"
-msgstr "数据库连接串"
-
-#: ../../reference/engine-config.rst:101 ../../reference/engine-config.rst:340
-msgid "storage.max_idle_conns"
-msgstr "storage.max_idle_conns"
-
-#: ../../reference/engine-config.rst:101 ../../reference/engine-config.rst:103
-#: ../../reference/engine-config.rst:340 ../../reference/engine-config.rst:342
-msgid "1"
-msgstr "1"
-
-#: ../../reference/engine-config.rst:101 ../../reference/engine-config.rst:340
-msgid "Maximum number of connections in idle connection pool"
-msgstr "空闲连接池最大连接数"
-
-#: ../../reference/engine-config.rst:103 ../../reference/engine-config.rst:342
-msgid "storage.max_open_conns"
-msgstr "storage.max_open_conns"
-
-#: ../../reference/engine-config.rst:103 ../../reference/engine-config.rst:342
-msgid "Maximum number of open connections to the database"
-msgstr "数据库最大连接数"
-
-#: ../../reference/engine-config.rst:105 ../../reference/engine-config.rst:344
-msgid "storage.conn_max_idle_time"
-msgstr "storage.conn_max_idle_time"
-
-#: ../../reference/engine-config.rst:105 ../../reference/engine-config.rst:107
-#: ../../reference/engine-config.rst:344 ../../reference/engine-config.rst:346
-msgid "-1s"
-msgstr "-1s"
-
-#: ../../reference/engine-config.rst:105 ../../reference/engine-config.rst:344
-msgid "Maximum amount of time a connection may be idle"
-msgstr "连接处于空闲状态的最长时间"
-
-#: ../../reference/engine-config.rst:107 ../../reference/engine-config.rst:346
-msgid "storage.conn_max_lifetime"
-msgstr "storage.conn_max_lifetime"
-
-#: ../../reference/engine-config.rst:107 ../../reference/engine-config.rst:346
-msgid "Maximum amount of time a connection may be reused"
-msgstr "可重复连接使用的最长时间"
-
-#: ../../reference/engine-config.rst:109 ../../reference/engine-config.rst:325
-msgid "engine.timeout"
-msgstr "engine.timeout"
-
-#: ../../reference/engine-config.rst:109
-msgid "Timeout for SCDB to send message to engine"
-msgstr "SCDB 向 SCQLEngine 发送消息的响应超时时间"
-
-#: ../../reference/engine-config.rst:111 ../../reference/engine-config.rst:327
-msgid "engine.protocol"
-msgstr "engine.protocol"
-
-#: ../../reference/engine-config.rst:111
-msgid "The transfer protocol of Engine, support http/https"
-msgstr "SCQLEngine 传输协议，支持 http/https"
-
-#: ../../reference/engine-config.rst:113 ../../reference/engine-config.rst:329
-msgid "engine.content_type"
-msgstr "engine.content_type"
-
-#: ../../reference/engine-config.rst:113
-msgid "The original media type in post body from SCDB to engine"
-msgstr "从 SCDB 向 SCQLEngine 实际发送的数据类型"
-
-#: ../../reference/engine-config.rst:115
-msgid "engine.spu.protocol"
-msgstr "engine.spu.protocol"
-
-#: ../../reference/engine-config.rst:115
-msgid "The mpc protocol for engine to work with"
-msgstr "SCQLEngine 使用的 mpc 协议"
-
-#: ../../reference/engine-config.rst:117
-msgid "engine.spu.field"
-msgstr "engine.spu.field"
-
-#: ../../reference/engine-config.rst:117
-msgid "A security parameter type for engine to work with"
-msgstr "SCQLEngine 所使用的安全参数类型"
-
-#: ../../reference/engine-config.rst:119
-msgid "engine.spu.sigmoid_mode"
-msgstr "engine.spu.sigmoid_mode"
-
-#: ../../reference/engine-config.rst:119
-msgid "The sigmoid approximation method for engine to work with"
-msgstr "SCQLEngine 中 MPC 协议中的 Sigmoid 方法"
-
-#: ../../reference/engine-config.rst:121
-msgid "party_auth.method"
-msgstr "party_auth.method"
-
-#: ../../reference/engine-config.rst:121
-msgid "pubkey"
-msgstr "pubkey"
-
-#: ../../reference/engine-config.rst:121
-msgid ""
-"Method to authenticate the participant when registering a user, supports "
-"pubkey/token"
-msgstr "注册用户时验证参与者的方法，支持 pubkey/token 认证"
-
-#: ../../reference/engine-config.rst:123
-msgid "party_auth.enable_timestamp_check"
-msgstr "party_auth.enable_timestamp_check"
-
-#: ../../reference/engine-config.rst:123
-msgid ""
-"When using pubkey authentication, whether to check the signed timestamp "
-"to avoid `replay attacks`_"
-msgstr "使用 pubkey 认证时，是否检查签名时间戳以避免 `replay attacks`_"
-
-#: ../../reference/engine-config.rst:125
-msgid "party_auth.validity_period"
-msgstr "party_auth.validity_period"
-
-#: ../../reference/engine-config.rst:125
-msgid "30s"
-msgstr "30s"
-
-#: ../../reference/engine-config.rst:125
-msgid ""
-"When enable timestamp check,  SCDB will check whether signed timestamp is"
-" within (now() - validity_period, now())"
-msgstr "当启用时间戳检查时，SCDB 将检查签名时间戳是否在 (now() - valid_period, now()) 内"
-
-#: ../../reference/engine-config.rst:132
-msgid "Config for SecurityCompromise"
-msgstr "安全退让配置"
-
-#: ../../reference/engine-config.rst:134
-msgid ""
-"SCQL provides some security compromise options, which can be selectively "
-"enabled when the security risk is acceptable to speed up the overall "
-"operation."
-msgstr "SCQL 提供了一些安全妥协选项，当安全风险可以接受时可以选择性地启用这些选项，以加快整体运行速度"
-
-#: ../../reference/engine-config.rst:136
-msgid ""
-"1. reveal_group_mark: default disable, if enabled, SCQL will expose "
-"grouping information(size of each group) when calculating group-by-"
-"aggregation, thereby avoiding the overhead caused by pre-shuffle.  "
-"``risk``: group size will be leaked, which is equivalent to the result of"
-" count(*)"
-msgstr ""
-"1. reveal_group_mark: 默认禁用，如果启用，SCQL 在计算分组聚合时会公开分组信息（每个组的大小），从而避免前置 "
-"shuffle 带来的开销。``风险``：分组大小会泄露，等价于泄露 count(*) 的结果"
-
-#: ../../reference/engine-config.rst:139
-msgid "A typical config of security_compromise can be like:"
-msgstr "典型的配置如下："
-
-#: ../../reference/engine-config.rst:150
-msgid "Config for storage"
-msgstr "存储配置"
-
-#: ../../reference/engine-config.rst:151
-msgid ""
-"Database is used to store the SCQL system data, such as CCL and user "
-"information, currently support MySQL/SQLite3. You can connect to a "
-"database by setting ``conn_str`` and ``type`` in the storage config."
-msgstr ""
-"数据库用于存储 SCQL 系统数据，如 CCL 和用户信息，目前 SCDB 支持 MySQL/SQLite3 。您可以通过配置项 "
-"``conn_str`` 和 ``type`` 来连接不同的数据库。"
-
-#: ../../reference/engine-config.rst:154
-msgid "type"
-msgstr "type"
-
-#: ../../reference/engine-config.rst:154
-msgid ""
-"The database type, which can be set as mysql/sqlite. And MySQL is "
-"recommended, which has been fully tested."
-msgstr "数据库类型可以设置为 mysql/sqlite，我们更加推荐使用 MySQL 来作为 SCDB 的数据库，其相关测试更加充分。"
-
-#: ../../reference/engine-config.rst:172
-msgid "conn_str"
-msgstr "conn_str"
-
-#: ../../reference/engine-config.rst:157
-msgid ""
-"MySQL string format, see `dsn-data-source-name <https://github.com/mattn"
-"/go-sqlite3#connection-string>`_ for more information."
-msgstr ""
-"MySQL语句格式, 更多信息请参考: `dsn-data-source-name <https://github.com/mattn/go-"
-"sqlite3#connection-string>`_ "
-
-#: ../../reference/engine-config.rst:159
-msgid "[username[:password]@][protocol[(address)]]/dbname[?param1=value1&...&paramN=valueN]"
-msgstr "[username[:password]@][protocol[(address)]]/dbname[?param1=value1&...&paramN=valueN]"
-
-#: ../../reference/engine-config.rst:162
-msgid "MySQL string example:"
-msgstr "MySQL 连接串示例："
-
-#: ../../reference/engine-config.rst:164
-msgid "``user:pass@tcp(127.0.0.1:3306)/dbname?charset=utf8mb4&parseTime=True&loc=Local&interpolateParams=true``"
-msgstr "``user:pass@tcp(127.0.0.1:3306)/dbname?charset=utf8mb4&parseTime=True&loc=Local&interpolateParams=true``"
-
-#: ../../reference/engine-config.rst:166
-msgid "SQLite3 string format:"
-msgstr "SQLite3 连接串示例："
-
-#: ../../reference/engine-config.rst:168
-msgid "more infos: https://github.com/mattn/go-sqlite3#connection-string."
-msgstr "参考: https://github.com/mattn/go-sqlite3#connection-string. "
-
-#: ../../reference/engine-config.rst:170
-msgid "SQLite3 string example:"
-msgstr "SQLite3 连接串示例："
-
-#: ../../reference/engine-config.rst:172
-msgid "``scdb.db``"
-msgstr "``scdb.db``"
-
-#: ../../reference/engine-config.rst:174
-msgid "A typical config of storage can be like:"
-msgstr "典型的存储配置如下："
-
-#: ../../reference/engine-config.rst:187
-msgid ""
-"To handle time.Time correctly, you need to include parseTime as a "
-"parameter. To fully support UTF-8 encoding, you need to change "
-"``charset=utf8`` to ``charset=utf8mb4``."
-msgstr ""
-"正确处理 time.Time 需要包含 parseTime 参数。为了完全支持 UTF-8 编码，需要将 ``charset=utf8`` 更改为"
-" ``charset=utf8mb4`` "
-
-#: ../../reference/engine-config.rst:191 ../../reference/engine-config.rst:624
-msgid "Config for audit"
-msgstr "审计日志配置"
-
-#: ../../reference/engine-config.rst:193
-msgid ""
-"Audit log are used to record the SCDB activities during query execution. "
-"It has two types: basic audit log and detail audit log."
-msgstr "SCDB 的审计日志是用来记录 SCDB 在执行 query 过程中所产生的一系列事件，它有两种类型：基础审计日志和补充审计日志。"
-
-#: ../../reference/engine-config.rst:195
-msgid ""
-"The basic audit log are used to record the basic information of a query, "
-"such as the result and user information, while the detail audit log "
-"records more detailed information such as execution plan and CCL details."
-" you can see `scdb_audit "
-"<https://github.com/secretflow/scql/blob/main/pkg/audit/audit.proto>`_ "
-"for more information."
-msgstr ""
-"基础审计日志是用来记录 SCDB "
-"在执行过程中的所产生一些事件的的基本信息，比如说：一次查询的结果、提交查询的用户信息等。补充审计日志信息，则是用来记录一些额外的信息，比如单词查询的执行计划、CCL信息等。更多信息请参考"
-" `scdb_audit "
-"<https://github.com/secretflow/scql/blob/main/pkg/audit/audit.proto>`_ 。"
-
-#: ../../reference/engine-config.rst:197
-msgid ""
-"When the audit log has reaches the maximum size ( set by "
-"``audit_max_size``), SCDB will save the audit log as ``name-"
-"timestamp.ext``, where the `name` is the filename set in "
-"``audit_log_file`` without the extension, `timestamp` is the time at "
-"which the log was rotated formatted with local time format of "
-"`2006-01-02T15-04-05.000`, `ext` is the extension set in "
-"``audit_log_file``."
-msgstr ""
-"审计日志的文件是系统自动生成的，当审计日志的大小达到 ``audit_max_size`` "
-"的设定值时，系统会自动将日志进行归档，归档的日志文件命名格式为 ``name-timestamp.ext`` ，其中 `name` 是 "
-"``audit_log_file`` 中设置的不带后缀的文件名，`timestamp` 是当前时间（格式为 "
-"`2006-01-02T15-04-05.000`），`ext` 是在 ``audit_log_file`` 中设置的后缀名。"
-
-#: ../../reference/engine-config.rst:200
-msgid ""
-"For example, if ``audit_log_file`` set as `audit/audit.log`, a backup "
-"created at 6:30pm on Nov 11 2016 would be saved to "
-"`./audit/audit-2016-11-04T18-30-00.000.log`"
-msgstr ""
-"例如，通过设置 ``audit.audit_log_file`` 为 `audit/audit.log` ， "
-"在2016年11月4日18:30归档的审计日志会被保存至 `./audit/audit-2016-11-04T18-30-00.000.log` "
-"。"
-
-#: ../../reference/engine-config.rst:204
-msgid "Password check"
-msgstr "密码校验"
-
-#: ../../reference/engine-config.rst:205
-msgid ""
-"``password_check`` serves to validate password strength. For ALTER USER, "
-"CREATE USER statements, if it's true, the password should be at least 16 "
-"characters which including a number, a lowercase letter, a uppercase "
-"letter and a special character."
-msgstr ""
-"`password_check` 用于验证密码强度校验。如果该参数设置为true， 对于 ALTER USER、CREATE USER "
-"语句，其所涉及的密码长度至少为 16 个字符，其中包括数字、小写字母、大写字母和特殊字符。"
-
-#: ../../reference/engine-config.rst:211
-msgid "Config for TLS"
-msgstr "TLS 配置"
-
-#: ../../reference/engine-config.rst:212
-msgid ""
-"If you need to enable TLS in SCDB, please refer to the following "
-"configuration."
-msgstr "如果需要在 SCDB 中启用 TLS ，请参考以下配置。"
-
-#: ../../reference/engine-config.rst:226 ../../reference/engine-config.rst:375
-msgid ""
-"Self-signed CA files may not be trusted by default, please refer to "
-"`Trouble shooting <https://github.com/secretflow/scql/tree/main/test-"
-"tools#trouble-shooting>`_ for help."
-msgstr "默认情况下，自签的 CA 文件可能不受信任，请参阅 `故障排除  <https://github.com/secretflow/scql/tree/main/test-tools#trouble-shooting>`_ 获取帮助。"
-
-#: ../../reference/engine-config.rst:228
-msgid ""
-"Additionally, it is necessary to configure the SCQLEngine to work with "
-"SSL, please refer :ref:`Config for SSL in SCQLEngine <scqlengine-tls>`."
-msgstr ""
-"除此之外，用户还需要设置 :ref:`SCQLEngine 的 SSL 配置 <scqlengine-tls>`，以保证 SCDB 和 "
-"SCQLEngine 能正常工作。"
-
-#: ../../reference/engine-config.rst:232
-msgid "Config for SPU"
-msgstr "SPU 配置"
-
-#: ../../reference/engine-config.rst:233
-msgid ""
-"SCQL supports different mpc protocol powered by SPU, you can choose "
-"different mpc protocol by setting SPU runtime config. Protocol **SEMI2K**"
-" is suggested, which is fully tested and support multi parties. See `SPU "
-"runtime config "
-"<https://www.secretflow.org.cn/docs/spu/en/reference/runtime_config.html>`_"
-" to get more information."
-msgstr ""
-"SCQL 的底层 MPC 协议由 SPU 控制，你可以通过更改 SPU 相关配置来选择不同的 MPC 协议， 更多信息请参考 `SPU 配置 "
-"<https://www.secretflow.org.cn/docs/spu/en/reference/runtime_config.html>`_"
-" 。"
-
-#: ../../reference/engine-config.rst:247
-msgid "SCQLBroker configuration options"
-msgstr "SCQLBroker 配置说明"
-
-#: ../../reference/engine-config.rst:249
-msgid ""
-"SCQLBroker, like SCDB, uses yaml files to configure parameters, The "
-"majority of their configuration items are the same."
-msgstr "SCQLBroker 和 SCDB一样，使用 yaml 文件配置参数，两者的配置项也大体相同"
-
-#: ../../reference/engine-config.rst:252
-msgid "Example for SCQLBroker"
-msgstr "SCQLBroker 配置示例"
-
-#: ../../reference/engine-config.rst:288
-msgid "Config in SCQLBroker"
-msgstr "SCQLBroker 配置"
-
-#: ../../reference/engine-config.rst:293
-msgid "intra_server.host"
-msgstr "intra_server.host"
-
-#: ../../reference/engine-config.rst:293
-msgid "127.0.0.1"
-msgstr "127.0.0.1"
-
-#: ../../reference/engine-config.rst:293
-msgid ""
-"The host where SCQLBroker listens for IntraServer requests, default "
-"localhost for safety"
-msgstr "SCQLBroker 监听 IntraServer 请求的 host，为了安全起见，默认 localhost"
-
-#: ../../reference/engine-config.rst:295
-msgid "intra_server.port"
-msgstr "intra_server.port"
-
-#: ../../reference/engine-config.rst:295
-msgid "The port on which SCQLBroker listens for IntraServer requests"
-msgstr "SCQLBroker 监听 IntraServer 请求的端口"
-
-#: ../../reference/engine-config.rst:297
-msgid "intra_server.protocol"
-msgstr "intra_server.protocol"
-
-#: ../../reference/engine-config.rst:297 ../../reference/engine-config.rst:307
-#: ../../reference/engine-config.rst:327
-msgid "http"
-msgstr "http"
-
-#: ../../reference/engine-config.rst:297
-msgid "The transfer protocol of IntraServer, supports HTTP/HTTPS"
-msgstr "IntraServer 传输协议，支持 HTTP/HTTPS"
-
-#: ../../reference/engine-config.rst:299
-msgid "intra_server.cert_file"
-msgstr "intra_server.cert_file"
-
-#: ../../reference/engine-config.rst:299
-msgid ""
-"Certificate file path for IntraServer to enable HTTPS, supports crt/pem "
-"type"
-msgstr "启用 IntraServer HTTPS 的证书文件路径，支持 crt/pem 类型"
-
-#: ../../reference/engine-config.rst:301
-msgid "intra_server.key_file"
-msgstr "intra_server.key_file"
-
-#: ../../reference/engine-config.rst:301
-msgid ""
-"Private key file path for IntraServer to enable HTTPS, supports key/pem "
-"type"
-msgstr "启用 IntraServer HTTPS 的私钥文件路径，支持 key/pem 类型"
-
-#: ../../reference/engine-config.rst:303
-msgid "inter_server.host"
-msgstr ""
-
-#: ../../reference/engine-config.rst:303
-msgid "The host where SCQLBroker listens for InterServer requests"
-msgstr "SCQLBroker 监听 InterServer 请求的 host"
-
-#: ../../reference/engine-config.rst:305
-msgid "inter_server.port"
-msgstr ""
-
-#: ../../reference/engine-config.rst:305
-msgid "The port on which SCQLBroker listens for InterServer requests"
-msgstr "SCQLBroker 监听 InterServer 请求的端口"
-
-#: ../../reference/engine-config.rst:307
-msgid "inter_server.protocol"
-msgstr ""
-
-#: ../../reference/engine-config.rst:307
-msgid "The transfer protocol of InterServer, supports HTTP/HTTPS"
-msgstr "InterServer 的传输协议，支持 HTTP/HTTPS"
-
-#: ../../reference/engine-config.rst:309
-msgid "inter_server.cert_file"
-msgstr ""
-
-#: ../../reference/engine-config.rst:309
-msgid ""
-"Certificate file path for InterServer to enable HTTPS, supports crt/pem "
-"type"
-msgstr "启用 InterServer HTTPS 的证书文件路径，支持 crt/pem 类型"
-
-#: ../../reference/engine-config.rst:311
-msgid "inter_server.key_file"
-msgstr ""
-
-#: ../../reference/engine-config.rst:311
-msgid ""
-"Private key file path for InterServer to enable HTTPS, supports key/pem "
-"type"
-msgstr "启用 InterServer HTTPS 的私钥文件路径，支持 key/pem 类型"
-
-#: ../../reference/engine-config.rst:313
-msgid "inter_timeout"
-msgstr ""
-
-#: ../../reference/engine-config.rst:313
-msgid "5s"
-msgstr ""
-
-#: ../../reference/engine-config.rst:313
-msgid "Timeout for requesting InterServe"
-msgstr "InterServer 的请求超时时间"
-
-#: ../../reference/engine-config.rst:317
-msgid "party_code"
-msgstr ""
-
-#: ../../reference/engine-config.rst:317
-msgid "Unique identifier used to identify the party"
-msgstr "用于识别参与方的唯一标识"
-
-#: ../../reference/engine-config.rst:319
-msgid "party_info_file"
-msgstr ""
-
-#: ../../reference/engine-config.rst:319
-msgid ""
-"File path that stores information of each party, including party code, "
-"public key and InterServer's URL"
-msgstr "存储参与方信息的文件路径，包括各参与方的 party code 、公钥和 InterServer 的 URL"
-
-#: ../../reference/engine-config.rst:321
-msgid "private_pem_path"
-msgstr ""
-
-#: ../../reference/engine-config.rst:321
-msgid ""
-"Private key file path for party_code, which will be used to sign requests"
-" to other SCQLBrokers"
-msgstr "party_code 的私钥文件路径，将用于签署对其他 SCQLBrokers 的请求"
-
-#: ../../reference/engine-config.rst:323
-msgid "intra_host"
-msgstr "intra_host"
-
-#: ../../reference/engine-config.rst:323
-msgid "The callback URL for the local SCQLEngine to notify SCQLBroker"
-msgstr "SCQLEngine 通知 SCQLBroker 的回调 URL"
-
-#: ../../reference/engine-config.rst:325
-msgid "Timeout for SCQLBroker to send message to SCQLEngine"
-msgstr "SCQLBroker 向 SCQLEngine 发送消息的响应超时时间"
-
-#: ../../reference/engine-config.rst:327
-msgid "The transfer protocol of SCQLEngine, support http/https"
-msgstr "SCQLEngine 传输协议，支持 http/https"
-
-#: ../../reference/engine-config.rst:329
-msgid "The original media type in post body from SCQLBroker to SCQLEngine"
-msgstr "从 SCQLBroker 向 SCQLEngine 实际发送的数据类型"
-
-#: ../../reference/engine-config.rst:331
-msgid "engine.uris"
-msgstr "engine.uris"
-
-#: ../../reference/engine-config.rst:331
-msgid ""
-"The URIs for local SCQLEngines, which using **for_peer** to serve peer "
-"engines and **for_self** to serve the SCQLBroker, if **for_self** is "
-"empty, **for_peer** is used instead"
-msgstr "本地 SCQLEngines 的 URI，其中 **for_peer** 为其它参与方的 SCQLEngines 提供服务， **for_self** 则为 SCQLBroker 提供服务，如果 **for_self** 为空，则默认使用 **for_peer** 来代替"
-
-#: ../../reference/engine-config.rst:336
-msgid ""
-"Database kind in SCQLBroker, supports MYSQL/SQLite3, MYSQL is "
-"recommended, SQLite3 may have problems with concurrency"
-msgstr "SCQLBroker 使用的数据库类型， 支持 MYSQL/SQLite3，推荐使用 MYSQL，SQLite3在并发下可能出问题"
-
-#: ../../reference/engine-config.rst:348
-msgid "24h"
-msgstr "24h"
-
-#: ../../reference/engine-config.rst:348
-msgid "Maximum lifespan of a job"
-msgstr "任务的超时时间"
-
-#: ../../reference/engine-config.rst:350
-msgid "1m"
-msgstr "1m"
-
-#: ../../reference/engine-config.rst:350
-msgid "The interval checking whether session is timeout"
-msgstr "检查会话是否超时的间隔"
-
-#: ../../reference/engine-config.rst:355
-msgid "Config for ServerConfig"
-msgstr "ServerConfig 配置"
-
-#: ../../reference/engine-config.rst:356
-msgid ""
-"SCQLBroker accept intra-domain requests through IntraServer, while accept"
-" requests between different SCQLBrokers through InterServer."
-msgstr "SCQLBroker 通过IntraServer 接收域内请求，而通过 InterServer 接收不同 SCQLBroker 之间的请求。"
-
-#: ../../reference/engine-config.rst:358
-msgid ""
-"IntraServer is recommended to use localhost host or LAN address to avoid "
-"external attacks, while InterServer is recommended to enable HTTPS to "
-"improve security."
-msgstr ""
-"IntraServer 建议使用 localhost 或 LAN 地址以避免外部攻击，而 InterServer 建议启用 HTTPS "
-"以提高安全性。"
-
-#: ../../reference/engine-config.rst:362
-msgid ""
-"Please refer to the following configuration to enable HTTPS for "
-"InterServer: (similar to IntraServer)"
-msgstr "请参考以下配置为 InterServer 启用 HTTPS ：（IntraServer 类似）"
-
-#: ../../reference/engine-config.rst:377
-msgid "Please change the endpoints in **party_info.json** from http to https."
-msgstr "请将 **party_info.json** 中的 endpoints 从 http 更改为 https"
-
-#: ../../reference/engine-config.rst:379
-msgid ""
-"We have enabled HTTPS in the `p2p examples "
-"<https://github.com/secretflow/scql/blob/main/examples/p2p-"
-"tutorial/README.md>`_, and the initialization process of related "
-"configurations may provide some help."
-msgstr "我们在 `p2p examples <https://github.com/secretflow/scql/blob/main/examples/p2p-tutorial/README.md>`_ 中启用了 HTTPS，相关配置的初始化过程也许能提供一些帮助"
-
-#: ../../reference/engine-config.rst:381
-msgid ""
-"For SCQLEngine to work with SSL, please refer :ref:`Config for SSL in "
-"SCQLEngine <scqlengine-tls>`."
-msgstr ""
-"除此之外，用户还需要设置 :ref:`SCQLEngine 的 SSL 配置 <scqlengine-tls>`，以保证 SCQLEngine 能正常工作。"
-
-#: ../../reference/engine-config.rst:385
-msgid "Reused Config"
-msgstr "复用的配置"
-
-#: ../../reference/engine-config.rst:387
-msgid ""
-"For more about SecurityCompromise, see :ref:`Config for "
-"SecurityCompromise <config_security_compromise_options>`"
-msgstr ""
-"有关 SecurityCompromise 的更多信息，请参阅 :ref:`安全退让配置 "
-"<config_security_compromise_options>`"
-
-#: ../../reference/engine-config.rst:389
-msgid ""
-"For more about Storage, see :ref:`Config for storage "
-"<config_storage_options>`"
-msgstr "有关存储的更多信息，请参阅 :ref:`存储配置 <config_storage_options>`"
-
-#: ../../reference/engine-config.rst:395
-msgid "SCQLEngine configuration options"
+msgid "SCQLEngine Configuration"
 msgstr "SCQLEngine 配置说明"
 
-#: ../../reference/engine-config.rst:396
+#: ../../reference/engine-config.rst:7
 msgid "SCQLEngine uses Gflags to manage configurations when SCQLEngine set up."
 msgstr "SCQLEngine 使用 Gflags 来管理配置项。"
 
-#: ../../reference/engine-config.rst:399
-msgid "Example for SCQLEngine"
+#: ../../reference/engine-config.rst:10
+msgid "Example configuration for SCQLEngine"
 msgstr "SCQLEngine 配置示例"
 
-#: ../../reference/engine-config.rst:411
-msgid "Config in SCQLEngine"
+#: ../../reference/engine-config.rst:22
+msgid "Configuration Options of SCQLEngine"
 msgstr "SCQLEngine 配置项"
 
-#: ../../reference/engine-config.rst:413
+#: ../../reference/engine-config.rst:24
 msgid ""
 "SCQLEngine can cooperate with upper-layer modules such as SCDB and "
 "SCQLBroker according to the deployment mode. ``Driver`` is used in the "
 "configuration items to represent these upper-layer modules."
-msgstr "SCQLEngine 根据部署方式可以与 SCDB 、 SCQLBroker 等上层模块协作。配置项中使用 ``Driver`` 来表示这些上层模块。"
+msgstr ""
+"SCQLEngine 根据部署方式可以与 SCDB 、 SCQLBroker 等上层模块协作。配置项中使用 ``Driver`` "
+"来表示这些上层模块。"
 
-#: ../../reference/engine-config.rst:418
+#: ../../reference/engine-config.rst:27
+msgid "Name"
+msgstr "名称"
+
+#: ../../reference/engine-config.rst:27
+msgid "Default"
+msgstr "默认值"
+
+#: ../../reference/engine-config.rst:27
+msgid "Description"
+msgstr "描述"
+
+#: ../../reference/engine-config.rst:29
 msgid "log_enable_console_logger"
 msgstr "log_enable_console_logger"
 
-#: ../../reference/engine-config.rst:418
+#: ../../reference/engine-config.rst:29 ../../reference/engine-config.rst:33
+#: ../../reference/engine-config.rst:49 ../../reference/engine-config.rst:65
+#: ../../reference/engine-config.rst:79 ../../reference/engine-config.rst:105
+#: ../../reference/engine-config.rst:109
+msgid "true"
+msgstr "true"
+
+#: ../../reference/engine-config.rst:29
 msgid "Whether logging to stdout while logging to file"
 msgstr "是否记录日志文件到控制台"
 
-#: ../../reference/engine-config.rst:420
+#: ../../reference/engine-config.rst:31
 msgid "log_dir"
 msgstr "log_dir"
 
-#: ../../reference/engine-config.rst:420
+#: ../../reference/engine-config.rst:31
 msgid "logs"
 msgstr "logs"
 
-#: ../../reference/engine-config.rst:420
+#: ../../reference/engine-config.rst:31
 msgid "The directory to save log file"
 msgstr "保存log文件的目录"
 
-#: ../../reference/engine-config.rst:422
+#: ../../reference/engine-config.rst:33
+msgid "enable_audit_logger"
+msgstr "enable_audit_logger"
+
+#: ../../reference/engine-config.rst:33
 msgid "Whether to enable audit log"
 msgstr "是否记录审计日志"
 
-#: ../../reference/engine-config.rst:424
+#: ../../reference/engine-config.rst:35
 msgid "audit_log_file"
 msgstr "audit_log_file"
 
-#: ../../reference/engine-config.rst:426
+#: ../../reference/engine-config.rst:35
+msgid "audit/audit.log"
+msgstr "audit/audit.log"
+
+#: ../../reference/engine-config.rst:35
+msgid "The file to save basic information about a query"
+msgstr "存储基础审计信息的日志文件"
+
+#: ../../reference/engine-config.rst:37
 msgid "audit_detail_file"
 msgstr "audit_detail_file"
 
-#: ../../reference/engine-config.rst:428
+#: ../../reference/engine-config.rst:37
+msgid "audit/detail.log"
+msgstr "audit/detail.log"
+
+#: ../../reference/engine-config.rst:37
+msgid "The file to save more detailed information about a query"
+msgstr "存储补充审计信息的日志文件"
+
+#: ../../reference/engine-config.rst:39
 msgid "audit_max_files"
 msgstr "audit_max_files"
 
-#: ../../reference/engine-config.rst:428
+#: ../../reference/engine-config.rst:39
+msgid "180"
+msgstr "180"
+
+#: ../../reference/engine-config.rst:39
 msgid "The maximum number of old audit log files to retain"
 msgstr "系统中保留的审计日志文件的最大数量，0 表示保留所有的日志文件"
 
-#: ../../reference/engine-config.rst:430
+#: ../../reference/engine-config.rst:41
 msgid "peer_engine_protocol"
 msgstr "peer_engine_protocol"
 
-#: ../../reference/engine-config.rst:430 ../../reference/engine-config.rst:446
+#: ../../reference/engine-config.rst:41 ../../reference/engine-config.rst:57
 msgid "`http:proto`"
 msgstr "`http:proto`"
 
-#: ../../reference/engine-config.rst:430
+#: ../../reference/engine-config.rst:41
 msgid "The rpc protocol between engine and engine"
 msgstr "SCQLEngine 与 SCQLEngine 之间的rpc协议"
 
-#: ../../reference/engine-config.rst:432
+#: ../../reference/engine-config.rst:43
 msgid "peer_engine_connection_type"
 msgstr "peer_engine_connection_type"
 
-#: ../../reference/engine-config.rst:432 ../../reference/engine-config.rst:448
+#: ../../reference/engine-config.rst:43 ../../reference/engine-config.rst:59
 msgid "pooled"
 msgstr "pooled"
 
-#: ../../reference/engine-config.rst:432
+#: ../../reference/engine-config.rst:43
 msgid "The rpc connection type between engine and engine"
 msgstr "SCQLEngine 与SCQLEngine 之间的 rpc 连接类型"
 
-#: ../../reference/engine-config.rst:434
+#: ../../reference/engine-config.rst:45
 msgid "peer_engine_timeout_ms"
 msgstr "peer_engine_timeout_ms"
 
-#: ../../reference/engine-config.rst:434
+#: ../../reference/engine-config.rst:45
 msgid "300000"
 msgstr "300000"
 
-#: ../../reference/engine-config.rst:434
+#: ../../reference/engine-config.rst:45
 msgid "The rpc timeout between engine and engine, unit: ms"
 msgstr "SCQLEngine 与 SCQLEngine之间的 rpc 超时时间，单位：ms"
 
-#: ../../reference/engine-config.rst:436
+#: ../../reference/engine-config.rst:47
 msgid "peer_engine_max_retry"
 msgstr "peer_engine_max_retry"
 
-#: ../../reference/engine-config.rst:436 ../../reference/engine-config.rst:452
+#: ../../reference/engine-config.rst:47 ../../reference/engine-config.rst:63
 msgid "3"
 msgstr "3"
 
-#: ../../reference/engine-config.rst:436
+#: ../../reference/engine-config.rst:47
 msgid "Rpc max retries(not including the first rpc) between engine and engine"
 msgstr "SCQLEngine 与 SCQLEngine 之间的rpc最大重试次数（不包括第一个rpc）"
 
-#: ../../reference/engine-config.rst:438
+#: ../../reference/engine-config.rst:49
 msgid "peer_engine_enable_ssl_as_client"
 msgstr "peer_engine_enable_ssl_as_client"
 
-#: ../../reference/engine-config.rst:438
+#: ../../reference/engine-config.rst:49
 msgid "Whether enable ssl encryption when send message to another engine"
 msgstr "SCQLEngine 与 SCQLEngine 之间发送消息是否启用ssl加密"
 
-#: ../../reference/engine-config.rst:440
+#: ../../reference/engine-config.rst:51
 msgid "peer_engine_enable_ssl_client_verification"
 msgstr "peer_engine_enable_ssl_client_verification"
 
-#: ../../reference/engine-config.rst:440
+#: ../../reference/engine-config.rst:51 ../../reference/engine-config.rst:67
+#: ../../reference/engine-config.rst:73 ../../reference/engine-config.rst:85
+#: ../../reference/engine-config.rst:89 ../../reference/engine-config.rst:103
+msgid "false"
+msgstr "false"
+
+#: ../../reference/engine-config.rst:51
 msgid ""
 "Whether enable certificate verification when send message to another "
 "engine"
 msgstr "作为客户端时，是否验证来自其他 SCQLEngine 的证书"
 
-#: ../../reference/engine-config.rst:442
+#: ../../reference/engine-config.rst:53
 msgid "peer_engine_ssl_client_ca_certificate"
 msgstr "peer_engine_ssl_client_ca_certificate"
 
-#: ../../reference/engine-config.rst:442
+#: ../../reference/engine-config.rst:53 ../../reference/engine-config.rst:69
+#: ../../reference/engine-config.rst:81 ../../reference/engine-config.rst:83
+#: ../../reference/engine-config.rst:87 ../../reference/engine-config.rst:91
+#: ../../reference/engine-config.rst:97 ../../reference/engine-config.rst:99
+#: ../../reference/engine-config.rst:101 ../../reference/engine-config.rst:107
+#: ../../reference/engine-config.rst:111
+msgid "none"
+msgstr "无"
+
+#: ../../reference/engine-config.rst:53
 msgid ""
 "The trusted CA file to verify certificate when send message to another "
 "engine"
 msgstr "可信 CA 文件，作为客户端时，用于验证来自其他 SCQLEngine 的证书"
 
-#: ../../reference/engine-config.rst:444
+#: ../../reference/engine-config.rst:55
 msgid "link_recv_timeout_ms"
 msgstr "link_recv_timeout_ms"
 
-#: ../../reference/engine-config.rst:444
+#: ../../reference/engine-config.rst:55
 msgid "30000"
 msgstr "30000"
 
-#: ../../reference/engine-config.rst:444
+#: ../../reference/engine-config.rst:55
 msgid "The max time that engine will wait for message come from another engine"
 msgstr "等待其他 SCQLEngine 消息的最大响应时间"
 
-#: ../../reference/engine-config.rst:446
+#: ../../reference/engine-config.rst:57
 msgid "driver_protocol"
 msgstr "driver_protocol"
 
-#: ../../reference/engine-config.rst:446
+#: ../../reference/engine-config.rst:57
 msgid "The rpc protocol between engine and Driver"
 msgstr "SCQLEngine 与 Driver 之间的 rpc 协议"
 
-#: ../../reference/engine-config.rst:448
+#: ../../reference/engine-config.rst:59
 msgid "driver_connection_type"
 msgstr "driver_connection_type"
 
-#: ../../reference/engine-config.rst:448
+#: ../../reference/engine-config.rst:59
 msgid "The rpc connection type between engine and Driver"
 msgstr "SCQLEngine 与 Driver 之间的 rpc 连接类型"
 
-#: ../../reference/engine-config.rst:450
+#: ../../reference/engine-config.rst:61
 msgid "driver_timeout_ms"
 msgstr "driver_timeout_ms"
 
-#: ../../reference/engine-config.rst:450
+#: ../../reference/engine-config.rst:61
 msgid "5000"
 msgstr "5000"
 
-#: ../../reference/engine-config.rst:450
+#: ../../reference/engine-config.rst:61
 msgid "The rpc timeout between engine and Driver, unit: ms"
 msgstr "SCQLEngine 与 Driver 之间的 rpc 超时时间，单位：ms"
 
-#: ../../reference/engine-config.rst:452
+#: ../../reference/engine-config.rst:63
 msgid "driver_max_retry"
 msgstr "driver_max_retry"
 
-#: ../../reference/engine-config.rst:452
+#: ../../reference/engine-config.rst:63
 msgid "Rpc max retries(not including the first rpc) between engine and Driver"
 msgstr "SCQLEngine 和 Driver 之间的 rpc 最大重试次数（不包括第一个 rpc）"
 
-#: ../../reference/engine-config.rst:454
+#: ../../reference/engine-config.rst:65
 msgid "driver_enable_ssl_as_client"
 msgstr "driver_enable_ssl_as_client"
 
-#: ../../reference/engine-config.rst:454
+#: ../../reference/engine-config.rst:65
 msgid "Whether enable ssl encryption when send message to Driver"
 msgstr "作为客户端，向 Driver 发送消息时是否启用 ssl 加密"
 
-#: ../../reference/engine-config.rst:456
+#: ../../reference/engine-config.rst:67
 msgid "driver_enable_ssl_client_verification"
 msgstr "driver_enable_ssl_client_verification"
 
-#: ../../reference/engine-config.rst:456
+#: ../../reference/engine-config.rst:67
 msgid "Whether enable certificate verification when send message to Driver"
 msgstr "作为客户端，是否验证 Driver 的证书"
 
-#: ../../reference/engine-config.rst:458
+#: ../../reference/engine-config.rst:69
 msgid "driver_ssl_client_ca_certificate"
 msgstr "driver_ssl_client_ca_certificate"
 
-#: ../../reference/engine-config.rst:458
+#: ../../reference/engine-config.rst:69
 msgid "The trusted CA file to verify certificate when send message to Driver"
 msgstr "可信 CA 文件，作为客户端时，用于验证 Driver 的证书"
 
-#: ../../reference/engine-config.rst:460
+#: ../../reference/engine-config.rst:71
 msgid "listen_port"
 msgstr "listen_port"
 
-#: ../../reference/engine-config.rst:460
+#: ../../reference/engine-config.rst:71
 msgid "8003"
 msgstr "8003"
 
-#: ../../reference/engine-config.rst:460
+#: ../../reference/engine-config.rst:71
 msgid "The listening port of engine service"
 msgstr "SCQLEngine 作为服务器的监听端口"
 
-#: ../../reference/engine-config.rst:462
+#: ../../reference/engine-config.rst:73
 msgid "enable_builtin_service"
 msgstr "enable_builtin_service"
 
-#: ../../reference/engine-config.rst:462
+#: ../../reference/engine-config.rst:73
 msgid "Whether enable brpc builtin service"
 msgstr "是否启用 brpc 内置服务"
 
-#: ../../reference/engine-config.rst:464
+#: ../../reference/engine-config.rst:75
 msgid "internal_port"
 msgstr "internal_port"
 
-#: ../../reference/engine-config.rst:464
+#: ../../reference/engine-config.rst:75
 msgid "9527"
 msgstr "9527"
 
-#: ../../reference/engine-config.rst:464
+#: ../../reference/engine-config.rst:75
 msgid "The listening port of brpc builtin services"
 msgstr " brpc 内置服务的监听端口"
 
-#: ../../reference/engine-config.rst:466
+#: ../../reference/engine-config.rst:77
 msgid "idle_timeout_s"
 msgstr "idle_timeout_s"
 
-#: ../../reference/engine-config.rst:466
+#: ../../reference/engine-config.rst:77
 msgid "30"
 msgstr "30"
 
-#: ../../reference/engine-config.rst:466
+#: ../../reference/engine-config.rst:77
 msgid ""
 "Idle connection close delay in seconds between the engine and Driver, "
 "unit: s"
 msgstr "SCQLEngine 与 Driver 之间的空闲连接关闭延迟（单位：秒）"
 
-#: ../../reference/engine-config.rst:468
+#: ../../reference/engine-config.rst:79
 msgid "server_enable_ssl"
 msgstr "server_enable_ssl"
 
-#: ../../reference/engine-config.rst:468
+#: ../../reference/engine-config.rst:79
 msgid "Whether enable SSL when engine work as a server"
 msgstr "SCQLEngine 作为服务器时是否启用SSL"
 
-#: ../../reference/engine-config.rst:470
+#: ../../reference/engine-config.rst:81
 msgid "server_ssl_certificate"
 msgstr "server_ssl_certificate"
 
-#: ../../reference/engine-config.rst:470
+#: ../../reference/engine-config.rst:81
 msgid "Certificate file path to enable SSL when engine work as a server"
 msgstr "SCQLEngine 作为服务器时启用 SSL 的证书文件路径"
 
-#: ../../reference/engine-config.rst:472
+#: ../../reference/engine-config.rst:83
 msgid "server_ssl_private_key"
 msgstr "server_ssl_private_key"
 
-#: ../../reference/engine-config.rst:472
+#: ../../reference/engine-config.rst:83
 msgid "Private key file path to enable SSL when engine work as a server"
 msgstr "SCQLEngine 作为服务器时启用 SSL 的私钥文件路径"
 
-#: ../../reference/engine-config.rst:474
+#: ../../reference/engine-config.rst:85
 msgid "enable_client_authorization"
 msgstr "enable_client_authorization"
 
-#: ../../reference/engine-config.rst:474
+#: ../../reference/engine-config.rst:85
 msgid "Whether check requests' http header when engine work as a server"
 msgstr "SCQLEngine 作为服务器时是否检查请求的 http 头"
 
-#: ../../reference/engine-config.rst:476
+#: ../../reference/engine-config.rst:87
 msgid "auth_credential"
 msgstr "auth_credential"
 
-#: ../../reference/engine-config.rst:476
+#: ../../reference/engine-config.rst:87
 msgid "Authorization credential used to check requests' http header"
 msgstr "SCQLEngine 作为服务器时用于检查请求的 http 头的 凭证"
 
-#: ../../reference/engine-config.rst:478
+#: ../../reference/engine-config.rst:89
 msgid "enable_driver_authorization"
 msgstr "enable_driver_authorization"
 
-#: ../../reference/engine-config.rst:478
+#: ../../reference/engine-config.rst:89
 msgid "Whether to authenticate the identity of Driver"
 msgstr "是否启动 Driver 身份认证"
 
-#: ../../reference/engine-config.rst:480
+#: ../../reference/engine-config.rst:91
 msgid "engine_credential"
 msgstr "engine_credential"
 
-#: ../../reference/engine-config.rst:480
+#: ../../reference/engine-config.rst:91
 msgid "Credential used to authenticate Driver"
 msgstr "用于验证 Driver 的凭证"
 
-#: ../../reference/engine-config.rst:482
+#: ../../reference/engine-config.rst:93
 msgid "session_timeout_s"
 msgstr "session_timeout_s"
 
-#: ../../reference/engine-config.rst:482
+#: ../../reference/engine-config.rst:93
 msgid "1800"
 msgstr "1800"
 
-#: ../../reference/engine-config.rst:482
+#: ../../reference/engine-config.rst:93
 msgid "Expiration duration of a session between engine and Driver, unit: s"
 msgstr "SCQLEngine 与 Driver 之间的会话过期时间，单位：秒"
 
-#: ../../reference/engine-config.rst:484
+#: ../../reference/engine-config.rst:95
 msgid "datasource_router"
 msgstr "datasource_router"
 
-#: ../../reference/engine-config.rst:484
+#: ../../reference/engine-config.rst:95
 msgid "embed"
 msgstr "embed"
 
-#: ../../reference/engine-config.rst:484
-msgid "The datasource router type"
-msgstr "数据源路由类型"
+#: ../../reference/engine-config.rst:95
+msgid "The datasource router type, \"embed\" or \"http\""
+msgstr "数据源路由类型， \"embed\" or \"http\""
 
-#: ../../reference/engine-config.rst:486
+#: ../../reference/engine-config.rst:97
 msgid "embed_router_conf"
 msgstr "embed_router_conf"
 
-#: ../../reference/engine-config.rst:486
+#: ../../reference/engine-config.rst:97
 msgid "Configuration for embed router in json format"
 msgstr "数据源的路由配置，其类型为 json 字符串格式"
 
-#: ../../reference/engine-config.rst:488
+#: ../../reference/engine-config.rst:99
+msgid "http_router_endpoint"
+msgstr ""
+
+#: ../../reference/engine-config.rst:99
+msgid ""
+"http datasource router endpoint, it is valid only when "
+"--datasource_router=http"
+msgstr "http 数据源的路由断点，只在 --datasource_router=http 时生效"
+
+#: ../../reference/engine-config.rst:101
 msgid "db_connection_info"
 msgstr "db_connection_info"
 
-#: ../../reference/engine-config.rst:488
+#: ../../reference/engine-config.rst:101
 msgid "Connection string used to connect to mysql"
 msgstr "用于连接 MySQL 数据库的连接串"
 
-#: ../../reference/engine-config.rst:490
+#: ../../reference/engine-config.rst:103
 msgid "enable_he_schema_type_ou"
 msgstr "enable_he_schema_type_ou"
 
-#: ../../reference/engine-config.rst:490
+#: ../../reference/engine-config.rst:103
 msgid ""
 "Whether to use OU to speed up HeSum, use ZPaillier by default for "
 "security, see: `heu/ou`_"
 msgstr "是否使用OU算法来加速 HeSum, 考虑到更优的安全性，默认使用 ZPaillier, 参见: `heu/ou`_"
 
-#: ../../reference/engine-config.rst:492
+#: ../../reference/engine-config.rst:105
 msgid "enable_self_auth"
 msgstr "enable_self_auth"
 
-#: ../../reference/engine-config.rst:492
+#: ../../reference/engine-config.rst:105
 msgid "Whether enable self identity authentication"
 msgstr "是否启用自我身份认证"
 
-#: ../../reference/engine-config.rst:494
+#: ../../reference/engine-config.rst:107
 msgid "private_key_pem_path"
 msgstr "private_key_pem_path"
 
-#: ../../reference/engine-config.rst:494
+#: ../../reference/engine-config.rst:107
 msgid "Path to private key pem file"
 msgstr "私钥 pem 文件的路径"
 
-#: ../../reference/engine-config.rst:496
+#: ../../reference/engine-config.rst:109
 msgid "enable_peer_auth"
 msgstr "enable_peer_auth"
 
-#: ../../reference/engine-config.rst:496
+#: ../../reference/engine-config.rst:109
 msgid "Whether enable peer parties identity authentication"
 msgstr "是否启用对端身份认证"
 
-#: ../../reference/engine-config.rst:498
+#: ../../reference/engine-config.rst:111
 msgid "authorized_profile_path"
 msgstr "authorized_profile_path"
 
-#: ../../reference/engine-config.rst:498
+#: ../../reference/engine-config.rst:111
 msgid "Path to authorized profile, in json format"
 msgstr "数据源的路由配置，其类型为 json 字符串格式"
 
-#: ../../reference/engine-config.rst:504
+#: ../../reference/engine-config.rst:117
 msgid "Config for datasource"
 msgstr "数据源配置"
 
-#: ../../reference/engine-config.rst:505
+#: ../../reference/engine-config.rst:118
 msgid ""
 "datasources(MySQL/SQLite3/PostgreSQL/CSVDB/ArrowSQL) are where the "
 "SCQLEngine gets its data from."
 msgstr "SCQLEngine 支持多种数据源，包括 MySQL/SQLite3/PostgreSQL/CSVDB/ArrowSQL 。"
 
-#: ../../reference/engine-config.rst:507
+#: ../../reference/engine-config.rst:120
 msgid ""
 "``datasource_router`` is design to support multi datasources, currently "
 "only supported: embed, which is initialized with ``embed_router_conf`` "
@@ -1328,7 +503,7 @@ msgstr ""
 "``embed_router_conf`` 来初始化，``embed_router_conf`` 是一个 json "
 "类型的字符串，一个典型的配置项如下所示："
 
-#: ../../reference/engine-config.rst:525
+#: ../../reference/engine-config.rst:138
 msgid ""
 "if ``embed_router_conf`` is empty, embed_router will try to initialized "
 "with ``db_connection_info``."
@@ -1336,11 +511,11 @@ msgstr ""
 "如果 ``embed_router_conf`` 为空， `embed_router` 则会尝试通过 ``db_connection_info``"
 " 来初始化。"
 
-#: ../../reference/engine-config.rst:528
+#: ../../reference/engine-config.rst:141
 msgid "Embed router"
 msgstr "Embed router"
 
-#: ../../reference/engine-config.rst:529
+#: ../../reference/engine-config.rst:142
 msgid ""
 "datasources in embed_router_conf contain information for connecting "
 "MySQL/SQLite3/PostgreSQL/CSVDB/ArrowSQL:"
@@ -1348,95 +523,95 @@ msgstr ""
 "embed_router_conf 中的 datasources 包含用于连接 "
 "MySQL/SQLite3/PostgreSQL/CSVDB/ArrowSQL 数据源的信息:"
 
-#: ../../reference/engine-config.rst:531
+#: ../../reference/engine-config.rst:144
 msgid "id: unique id of datasource."
 msgstr "id：数据源的唯一ID。"
 
-#: ../../reference/engine-config.rst:533
+#: ../../reference/engine-config.rst:146
 msgid "name: custom description help to distinguish datasources."
 msgstr "name：自定义描述，有助于区分数据源。"
 
-#: ../../reference/engine-config.rst:535
+#: ../../reference/engine-config.rst:148
 msgid ""
 "kind: datasource type, currently support "
 "MySQL/SQLite3/PostgreSQL/CSVDB/ArrowSQL."
 msgstr "kind：数据源类型，目前支持 MySQL/SQLite3/PostgreSQL/CSVDB/ArrowSQL 。"
 
-#: ../../reference/engine-config.rst:537
+#: ../../reference/engine-config.rst:150
 msgid ""
 "connection_str: string used to connect "
 "MySQL/SQLite3/PostgreSQL/CSVDB/ArrowSQL."
 msgstr "connection_str：用于连接 MySQL/SQLite3/PostgreSQL/CSVDB/ArrowSQL 数据库的连接串。"
 
-#: ../../reference/engine-config.rst:546
+#: ../../reference/engine-config.rst:159
 msgid "MySQL Connection string format:"
 msgstr "MySQL 连接串格式："
 
-#: ../../reference/engine-config.rst:540
+#: ../../reference/engine-config.rst:153
 msgid "<str> == <assignment> | <assignment> ';' <str>"
 msgstr ""
 
-#: ../../reference/engine-config.rst:542 ../../reference/engine-config.rst:560
+#: ../../reference/engine-config.rst:155 ../../reference/engine-config.rst:173
 msgid "<assignment> == <name> '=' <value>"
 msgstr ""
 
-#: ../../reference/engine-config.rst:544
+#: ../../reference/engine-config.rst:157
 msgid ""
 "<name> == 'host' | 'port' | 'user' | 'password' | 'db' | 'compress' | "
 "'auto-reconnect' | 'reset' | 'fail-readonly'"
 msgstr ""
 
-#: ../../reference/engine-config.rst:546 ../../reference/engine-config.rst:564
+#: ../../reference/engine-config.rst:159 ../../reference/engine-config.rst:177
 msgid "<value> == [~;]*"
 msgstr ""
 
-#: ../../reference/engine-config.rst:549
+#: ../../reference/engine-config.rst:162
 msgid "MySQL Connection string e.g:"
 msgstr "MySQL 连接串示例："
 
-#: ../../reference/engine-config.rst:549 ../../reference/engine-config.rst:567
+#: ../../reference/engine-config.rst:162 ../../reference/engine-config.rst:180
 msgid "``db=${db};user=${user};password=${password};host=${host}``"
 msgstr "``db=${db};user=${user};password=${password};host=${host}``"
 
-#: ../../reference/engine-config.rst:552
+#: ../../reference/engine-config.rst:165
 msgid "SQLite3 Connection string format:"
 msgstr "SQLite3 连接串格式："
 
-#: ../../reference/engine-config.rst:552
+#: ../../reference/engine-config.rst:165
 msgid "more infos: https://www.sqlite.org/c3ref/open.html"
 msgstr "参考：https://www.sqlite.org/c3ref/open.html"
 
-#: ../../reference/engine-config.rst:555
+#: ../../reference/engine-config.rst:168
 msgid "SQLite3 Connection string e.g:"
 msgstr "SQLite3 连接串示例"
 
-#: ../../reference/engine-config.rst:555
+#: ../../reference/engine-config.rst:168
 msgid "``file:data_test.db?mode=memory&cache=shared``"
 msgstr "``file:data_test.db?mode=memory&cache=shared``"
 
-#: ../../reference/engine-config.rst:564
+#: ../../reference/engine-config.rst:177
 msgid "PostgreSQL Connection string format:"
 msgstr "PostgreSQL 连接串格式："
 
-#: ../../reference/engine-config.rst:558
+#: ../../reference/engine-config.rst:171
 msgid "<str> == <assignment> | <assignment> ' ' <str>"
 msgstr ""
 
-#: ../../reference/engine-config.rst:562
+#: ../../reference/engine-config.rst:175
 msgid ""
 "<name> == 'host' | 'port' | 'user' | 'password' | 'dbname' | "
 "'connect_timeout'"
 msgstr ""
 
-#: ../../reference/engine-config.rst:567
+#: ../../reference/engine-config.rst:180
 msgid "PostgreSQL Connection string e.g:"
 msgstr "PostgreSQL 连接串示例："
 
-#: ../../reference/engine-config.rst:570
+#: ../../reference/engine-config.rst:183
 msgid "CSVDB Connection string format:"
 msgstr "CSVDB 连接串格式："
 
-#: ../../reference/engine-config.rst:570
+#: ../../reference/engine-config.rst:183
 msgid ""
 "Since connection_str is an object in another json object, the format is a"
 " converted json string corresponding to `CsvdbConf "
@@ -1446,35 +621,35 @@ msgstr ""
 "<https://github.com/secretflow/scql/tree/main/engine/datasource/csvdb_conf.proto>`_"
 " 结构体转换后的的json字符串 "
 
-#: ../../reference/engine-config.rst:573
+#: ../../reference/engine-config.rst:186
 msgid "CSVDB Connection string e.g:"
 msgstr "CSVDB连接语句示例:"
 
-#: ../../reference/engine-config.rst:573
+#: ../../reference/engine-config.rst:186
 msgid "\"{\\\\\\\"db_name\\\\\\\":\\\\\\\"csvdb\\\\\\\",\\\\\\\"tables\\\\\\\":[{\\\\\\\"table_name\\\\\\\":\\\\\\\"staff\\\\\\\",\\\\\\\"data_path\\\\\\\":\\\\\\\"test.csv\\\\\\\",\\\\\\\"columns\\\\\\\":[{\\\\\\\"column_name\\\\\\\":\\\\\\\"id\\\\\\\",\\\\\\\"column_type\\\\\\\":\\\\\\\"1\\\\\\\"}]}]}\""
 msgstr "\"{\\\\\\\"db_name\\\\\\\":\\\\\\\"csvdb\\\\\\\",\\\\\\\"tables\\\\\\\":[{\\\\\\\"table_name\\\\\\\":\\\\\\\"staff\\\\\\\",\\\\\\\"data_path\\\\\\\":\\\\\\\"test.csv\\\\\\\",\\\\\\\"columns\\\\\\\":[{\\\\\\\"column_name\\\\\\\":\\\\\\\"id\\\\\\\",\\\\\\\"column_type\\\\\\\":\\\\\\\"1\\\\\\\"}]}]}\""
 
-#: ../../reference/engine-config.rst:578
+#: ../../reference/engine-config.rst:191
 msgid "ArrowSQL Connection string format:"
 msgstr "ArrowSQL 连接串格式："
 
-#: ../../reference/engine-config.rst:576
+#: ../../reference/engine-config.rst:189
 msgid "grpc+<scheme>://host:port"
 msgstr ""
 
-#: ../../reference/engine-config.rst:578
+#: ../../reference/engine-config.rst:191
 msgid "<scheme> == 'tcp' | 'tls'"
 msgstr ""
 
-#: ../../reference/engine-config.rst:584
+#: ../../reference/engine-config.rst:197
 msgid "ArrowSQL Connection string e.g:"
 msgstr "ArrowSQL 连接串示例："
 
-#: ../../reference/engine-config.rst:581
+#: ../../reference/engine-config.rst:194
 msgid "``grpc+tcp://127.0.0.1:6666``"
 msgstr ""
 
-#: ../../reference/engine-config.rst:584
+#: ../../reference/engine-config.rst:197
 msgid ""
 "As a datasource embedded in SCQLEngine, ArrowSQL requires an additional "
 "gRPC server which provides the corresponding interface for executing an "
@@ -1482,13 +657,13 @@ msgid ""
 "<https://arrow.apache.org/docs/format/FlightSql.html>`_"
 msgstr ""
 "作为 SCQLEngine 内嵌的数据源，ArrowSQL 依赖额外的 gRPC 服务，该服务需要提供相应的接口，用于执行 `Arrow "
-"Flight SQL <https://arrow.apache.org/docs/format/FlightSql.html>` 即时查询"
+"Flight SQL <https://arrow.apache.org/docs/format/FlightSql.html>`_ 即时查询"
 
-#: ../../reference/engine-config.rst:587
+#: ../../reference/engine-config.rst:200
 msgid "Routing rules"
 msgstr "路由规则"
 
-#: ../../reference/engine-config.rst:588
+#: ../../reference/engine-config.rst:201
 msgid ""
 "embed_router's rules support wildcard ``*`` , when given a table in "
 "format: *database_name:table_name*, embed_router will route to the "
@@ -1497,7 +672,7 @@ msgstr ""
 "embed_router 的规则支持通配符 ``*`` ，当给定一个 *database_name:table_name* "
 "的数据表时，embed_router 将通过以下方式路由到对应的数据源："
 
-#: ../../reference/engine-config.rst:591
+#: ../../reference/engine-config.rst:204
 msgid ""
 "find the exact rules first, whose ``${db}:${table}`` equals to "
 "*database_name:table_name*;"
@@ -1505,15 +680,15 @@ msgstr ""
 "在 `embed_router_conf` 的 `rules` 中查找 `${db}:${table}` 与 "
 "`database_name:table_name` 完全相等的 rule"
 
-#: ../../reference/engine-config.rst:592
+#: ../../reference/engine-config.rst:205
 msgid "try the database_name:\\* rules;"
 msgstr "在 `embed_router_conf` 的 `rules` 中查找 `${db}` 与 `database_name` 完全相等的 rule"
 
-#: ../../reference/engine-config.rst:593
+#: ../../reference/engine-config.rst:206
 msgid "try \\*:table_name in the end."
 msgstr "在 `embed_router_conf` 的 `rules` 中查找 `${table}` 与 `table_name` 完全相等的 rule"
 
-#: ../../reference/engine-config.rst:595
+#: ../../reference/engine-config.rst:208
 msgid ""
 "Once found, SCQLEngine will try to connect database with datasource's "
 "information correspond to the *datasource_id*."
@@ -1521,25 +696,25 @@ msgstr ""
 "一旦找到对应的 rule ，SCQLEngine 将根据 rule 中 datasource_id 在 datasources 中找到 "
 "对应的数据源信息，并根据这些信息连接对应的数据库。"
 
-#: ../../reference/engine-config.rst:598
+#: ../../reference/engine-config.rst:211
 msgid "Config for Brpc server"
 msgstr "Brpc 服务器配置"
 
-#: ../../reference/engine-config.rst:599
+#: ../../reference/engine-config.rst:212
 msgid ""
 "SCQLEngine uses **Brpc** to communicate with Driver and other peer "
 "SCQLEngines, each SCQLEngine will start a Brpc service on *local-"
 "host:listen_port* to receive data from outside. If you want to enable "
 "Brpc builtin services, add FLAGS:"
 msgstr ""
-"SCQLEngine 使用 Brpc 与 Driver 以及其他的 SCQLEngine 进行通信，每个 SCQLEngine 都会在 local-"
-"host:listen_port 上启动 Brpc 服务以接收来自外部的数据。如果要启用 Brpc 内置服务，请添加 FLAGS："
+"SCQLEngine 使用 Brpc 与 Driver 以及其他的 SCQLEngine 进行通信，每个 SCQLEngine 都会在 "
+"local-host:listen_port 上启动 Brpc 服务以接收来自外部的数据。如果要启用 Brpc 内置服务，请添加 FLAGS："
 
-#: ../../reference/engine-config.rst:610
+#: ../../reference/engine-config.rst:223
 msgid "Config for SSL"
 msgstr "SSL配置"
 
-#: ../../reference/engine-config.rst:611
+#: ../../reference/engine-config.rst:224
 msgid ""
 "If you want to enable SSL in SCQLEngine, add FLAGS as follows. "
 "Additionally, it may be necessary to configure the Driver to work with "
@@ -1547,9 +722,14 @@ msgid ""
 "SCQLBroker <broker-tls>`."
 msgstr ""
 "如果要在 SCQLEngine 中启用 SSL，请添加 FLAGS，如下所示。 此外，也可能需要配置 Driver 在 TLS 下运行，请参考 "
-":ref:`SCDB 的 TLS 配置 <scdb-tls>` 或 :ref:`SCQLBroker 的 TLS 配置 <broker-tls>` 。"
+":ref:`SCDB 的 TLS 配置 <scdb-tls>` 或 :ref:`SCQLBroker 的 TLS 配置 <broker-tls>`"
+" 。"
 
-#: ../../reference/engine-config.rst:625
+#: ../../reference/engine-config.rst:237
+msgid "Config for audit"
+msgstr "审计日志配置"
+
+#: ../../reference/engine-config.rst:238
 msgid ""
 "The audit log in SCQLEngine is used to record the SCQLEngine activities "
 "during the execution of tasks from Driver. Just like the audit in Driver,"
@@ -1559,7 +739,7 @@ msgstr ""
 "SCQLEngine 的审计日志是用来记录 SCQLEngine 在执行 Driver 下发任务过程中所产生的一系列事件，和 Driver "
 "一样，它也有两种类型：基础审计日志和详补充审计日志"
 
-#: ../../reference/engine-config.rst:627
+#: ../../reference/engine-config.rst:240
 msgid ""
 "The common audit is used to record some basic information about a task, "
 "while the detail audit is used to record more detailed information of the"
@@ -1572,7 +752,7 @@ msgstr ""
 "<https://github.com/secretflow/scql/blob/main/engine/audit/audit.proto>`_"
 " 。"
 
-#: ../../reference/engine-config.rst:629
+#: ../../reference/engine-config.rst:242
 msgid ""
 "The log file is rotated in every 24:00:00 in local time, and the filename"
 " is generated in the format ``name-date.ext``, where `name` is the "
@@ -1584,7 +764,7 @@ msgstr ""
 "，其中 `name` 是在 ``audit_log_file`` 中设置的不带后缀的文件名， `date` 是当前的日期（格式为 `YYYY-"
 "MM-DD`）， `ext` 是在 ``audit_log_file`` 中设置的后缀名。"
 
-#: ../../reference/engine-config.rst:632
+#: ../../reference/engine-config.rst:245
 msgid ""
 "For example, if you set ``audit_log_file`` as `audit/audit.log`, a backup"
 " created on Nov 11 2016 would be saved to `/audit/audit_2016-11-04.log`"
@@ -1592,11 +772,11 @@ msgstr ""
 "例如，通过设置 ``audit_log_file`` 为 `audit/audit.log`，在2016年11月4日 24:00:00 "
 "归档的审计日志会保存至 `./audit/audit_2016-11-04.log` 。"
 
-#: ../../reference/engine-config.rst:635
+#: ../../reference/engine-config.rst:248
 msgid "Config for party authentication"
 msgstr "参与方身份验证配置"
 
-#: ../../reference/engine-config.rst:636
+#: ../../reference/engine-config.rst:249
 msgid ""
 "For security, SCQLEngine enables party authentication by default. "
 "SCQLEngine will check it's public key in the Driver request matches the "
@@ -1607,4 +787,3 @@ msgstr ""
 "安全起见，SCQLEngine 默认启用参与方身份验证。 SCQLEngine 将检查 Driver 请求中自身的公钥是否与 "
 "``private_key_pem_path`` 中的本地公钥匹配，并且其他参与者的公钥也与 "
 "``authorized_profile_path`` 中的公钥匹配。"
-
