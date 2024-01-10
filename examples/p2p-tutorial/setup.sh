@@ -25,7 +25,7 @@ ALICE_PUBKEY=$(openssl pkey -in "$SCRIPT_DIR/broker/alice/conf/private_key.pem" 
 BOB_PUBKEY=$(openssl pkey -in "$SCRIPT_DIR/broker/bob/conf/private_key.pem" -pubout -outform DER | base64)
 
 for file in ${DATA_FILES[*]}; do
-  # remove suffix .template
+  # 删除 party_info.json.template的后缀 .template 作为新文件名
   newfile=$(echo $file | sed 's/\.[^.]*$//')
   if [[ "$(uname)" == "Darwin" ]]; then
     # macOS
@@ -40,6 +40,7 @@ for file in ${DATA_FILES[*]}; do
 done
 
 # generate self-signed ca files for each broker and engine
+# 生成自签名的CA文件
 (cd $SCRIPT_DIR && bash ../../test-tools/ca_generator.sh)
 
 echo "successfully completed private key generation, public key configuration and ca file generation"
